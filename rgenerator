@@ -1,0 +1,49 @@
+#include <iostream>
+#include<string>
+#include<cstdlib>
+#include<iomanip>
+
+#define max 30
+using namespace std;
+class LuxBhaiya
+{
+    int n;
+    string gaali1[max]={"Chutiya ","Jhaat ","Bhosad ","Chuttad ","Lavda ","Tatta ","Madarchod ","Bakchod ","Bhenchod ","Gand ","Chodu ","Chuchi ","Bhosadike ","Chut ","DhoomChuttad "};
+
+    string gaali2[max]={"Chutiya","Bhosad","Chuttad","Ka Lavda","Ka Tatta","Madarchod","Bakchod","Bhenchod","Ka Gand","Chodu","Ki Chuchi","Bhosadike","Randi","DhoomChuttad","Betichod"};
+
+    public:
+    LuxBhaiya()
+    {
+        n=15;
+    }
+    string generate_Gaali();
+};
+
+string LuxBhaiya::generate_Gaali()
+{
+    string resultgaali1 =" ";
+    string resultgaali2 =" ";
+    for (int i = 0; i < n; i++)
+        resultgaali1 = gaali1[rand()%n];
+    for (int i = 0; i < n; i++)
+        resultgaali2 = gaali2[rand()%n];
+    return resultgaali1 + resultgaali2;
+}
+
+int main()
+{
+    LuxBhaiya L5;
+    string result1;
+    char ch,ch2;
+    cout<<"--------------------Random Gaali Generator For Loasters--------------------"<<endl;
+    do
+    {
+        result1=L5.generate_Gaali();
+        cout<<setw(44)<<result1<<endl;
+        cout<<"---------------------------------------------------------------------------------------------"<<endl;
+        cout<<"Another One!(Y/N)"<<endl;
+        cin>>ch2;
+    }while(ch2=='y'||ch=='Y');
+    return 0;
+}
