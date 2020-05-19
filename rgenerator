@@ -35,7 +35,7 @@ int main()
 {
     LuxBhaiya L5;
     string result1;
-    char ch,ch2;
+    char ch2;
     cout<<"--------------------Random Gaali Generator For Loasters--------------------"<<endl;
     do
     {
@@ -44,6 +44,6 @@ int main()
         cout<<"---------------------------------------------------------------------------------------------"<<endl;
         cout<<"Another One!(Y/N)"<<endl;
         cin>>ch2;
-    }while(ch2=='y'||ch=='Y');
+    }while(ch2=='y'||ch2=='Y');
     return 0;
 }
